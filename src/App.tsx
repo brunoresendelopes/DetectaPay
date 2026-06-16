@@ -130,12 +130,21 @@ export default function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-8 space-y-6">
         
         {/* Elegant Dark Header Section */}
-        <header className="flex justify-between items-end mb-8 border-b border-slate-800 pb-4">
-          <div className="flex flex-col">
-            <h1 className="text-3xl md:text-4xl font-light tracking-tight text-slate-300">
-              Detecta<span className="font-semibold text-white"> Pay</span> 
-              <span className="text-slate-500 font-extralight ml-2 text-lg md:text-xl hidden sm:inline">| Calculadora de Datas de Recebimento</span>
-            </h1>
+        <header className="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
+          <div className="flex items-center gap-4">
+            <img 
+              src="https://www.dropbox.com/scl/fi/dhouz5gxyaebkmjws4mmy/Logo.jpg?rlkey=n4bj15wc5znf939k1l5j3p7z3&st=w8pnp6sz&raw=1" 
+              alt="Detecta Logo" 
+              referrerPolicy="no-referrer"
+              className="h-9 md:h-11 w-auto object-contain bg-white rounded px-1.5 py-0.5"
+            />
+            <div className="h-8 md:h-10 w-[1px] bg-slate-800" />
+            <div className="flex flex-col">
+              <h1 className="text-2xl md:text-3xl font-light tracking-tight text-slate-300">
+                Detecta<span className="font-semibold text-white"> Pay</span> 
+                <span className="text-slate-500 font-extralight ml-2 text-base md:text-lg hidden md:inline">| Calculadora de Datas de Recebimento</span>
+              </h1>
+            </div>
           </div>
           <div className="text-right">
             <span className="block text-[10px] uppercase tracking-widest text-slate-500 mb-1">Data de Referência (Hoje)</span>
