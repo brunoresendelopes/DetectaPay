@@ -134,7 +134,7 @@ export default function App() {
           <div className="flex flex-col">
             <h1 className="text-3xl md:text-4xl font-light tracking-tight text-slate-300">
               Detecta<span className="font-semibold text-white"> Pay</span> 
-              <span className="text-slate-500 font-extralight ml-2 text-lg md:text-xl hidden sm:inline">| Calculadora de Datas de Pagamento</span>
+              <span className="text-slate-500 font-extralight ml-2 text-lg md:text-xl hidden sm:inline">| Calculadora de Datas de Recebimento</span>
             </h1>
           </div>
           <div className="text-right">
@@ -283,29 +283,6 @@ export default function App() {
                 <div className="text-xs text-slate-500 py-1 font-medium flex items-center gap-1.5 self-center sm:self-auto">
                   <BookmarkCheck className="w-4 h-4 text-emerald-400" />
                   <span>Mecanismo de ajuste em tempo real</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Active Settings Info Block */}
-            <div className="bg-slate-900/20 rounded-2xl p-5 border border-slate-850/80 space-y-3">
-              <h4 className="font-bold text-xs uppercase tracking-wider text-slate-400 flex items-center gap-1">
-                <HelpCircle className="w-4 h-4 text-slate-500" />
-                <span>Como esse cálculo de prazos funciona?</span>
-              </h4>
-              <div className="text-xs text-slate-400 leading-relaxed space-y-2">
-                <p>
-                  O motor de cálculo adiciona os dias corridos informados à data inicial. Em seguida, as regras de negócios específicas do cliente selecionado validam o resultado frente a dias úteis e faturamento padrão bancário:
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
-                  <div className="bg-slate-955 p-3 rounded-lg border border-slate-850 bg-slate-950/50">
-                    <span className="font-bold text-emerald-400 block mb-0.5 text-[11px]">FINS DE SEMANA</span>
-                    Caso o dia coincida com Sábado ou Domingo, o pagamento é transferido para o primeiro dia útil imediato (Segunda-feira).
-                  </div>
-                  <div className="bg-slate-955 p-3 rounded-lg border border-slate-850 bg-slate-950/50">
-                    <span className="font-bold text-emerald-400 block mb-0.5 text-[11px]">FERIADOS NACIONAIS</span>
-                    Recursos automáticos prorrogam o faturamento caso a semana coincida com recesso nacional ou datas cadastradas.
-                  </div>
                 </div>
               </div>
             </div>

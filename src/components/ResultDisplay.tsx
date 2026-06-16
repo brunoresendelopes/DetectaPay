@@ -59,12 +59,14 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
               </p>
             </div>
 
-            <div className="bg-slate-950/40 p-4 rounded-xl border border-slate-850 relative">
-              <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-[9px] font-semibold text-slate-400 absolute top-3 right-3">
-                Projeção Rígida
-              </span>
-              <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Vencimento Puro (+{daysOffset}d)</span>
-              <p className="text-xl font-bold font-mono text-slate-400 mt-2 tracking-tight">
+            <div className="bg-slate-950/40 p-4 rounded-xl border border-slate-850 space-y-2">
+              <div className="flex justify-between items-start gap-2">
+                <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Vencimento Puro (+{daysOffset}d)</span>
+                <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-[9px] font-semibold text-slate-400 whitespace-nowrap">
+                  Projeção Rígida
+                </span>
+              </div>
+              <p className="text-xl font-bold font-mono text-slate-400 tracking-tight">
                 {formatDateBR(originalTargetDate)}
               </p>
               <span className="text-[11px] text-slate-500 mt-1 block">
@@ -72,12 +74,12 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
               </span>
             </div>
           </div>
-
+          
           {/* Final Adjusted Payment Date */}
           <div className="space-y-4 pt-4 md:pt-0 md:pl-6">
             <div>
               <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-400 block">Data de Liquidação</span>
-              <p className="text-xs font-semibold text-slate-400 mt-1">
+              <p className="text-xs font-semibold text-slate-405 mt-1">
                 Status: {isAdjusted ? (
                   <span className="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold inline-block uppercase">
                     Ajustado pelas Regras
@@ -90,12 +92,14 @@ export default function ResultDisplay({ result }: ResultDisplayProps) {
               </p>
             </div>
 
-            <div className="bg-slate-950 p-4 rounded-xl border border-emerald-500/20 relative">
-              <span className="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[9px] font-bold absolute top-3 right-3 animate-pulse uppercase">
-                Definitiva
-              </span>
-              <span className="text-[10px] font-semibold text-emerald-400 uppercase tracking-wider block">Data Oficial de Boletos</span>
-              <p className="text-3xl font-extrabold font-mono text-white mt-1 tracking-tighter">
+            <div className="bg-slate-950 p-4 rounded-xl border border-emerald-500/20 space-y-2">
+              <div className="flex justify-between items-start gap-2">
+                <span className="text-[10px] font-semibold text-emerald-400 uppercase tracking-wider block">Data Oficial de Boletos</span>
+                <span className="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[9px] font-bold animate-pulse uppercase whitespace-nowrap">
+                  Definitiva
+                </span>
+              </div>
+              <p className="text-3xl font-extrabold font-mono text-white tracking-tighter">
                 {formatDateBR(finalPaymentDate)}
               </p>
               <span className="text-xs text-slate-300 mt-1 block font-semibold flex items-center gap-1">

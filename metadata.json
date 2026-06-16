@@ -1,6 +1,6 @@
 {
-  "name": "Calculadora de Datas de Pagamento",
-  "description": "Calculadora profissional de prazos e datas de pagamento ajustadas de acordo com as regras de clientes específicos e feriados brasileiros.",
+  "name": "Calculadora de Datas de Recebimento",
+  "description": "Calculadora profissional de prazos e datas de recebimento ajustadas de acordo com as regras de clientes específicos e feriados brasileiros.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
